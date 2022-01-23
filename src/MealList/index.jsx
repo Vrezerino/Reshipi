@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useStateValue } from '../state';
 import { setResults, setIngredientSearchTerms } from '../state';
 import { mapRecipeInfo } from '../utils/mapRecipeInfo';
