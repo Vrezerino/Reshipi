@@ -14,7 +14,7 @@ const App = () => {
 
 	const fetchData = async () => {
 		try {
-			// etfs
+			// tregerge
 			const data = await fetchMeals();
 			dispatch(setAllMeals(data));
 		} catch (e) {
