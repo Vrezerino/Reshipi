@@ -26,13 +26,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Run end-to-end tests
-        run: npm run test
-      - name: e2e tests
         uses: cypress-io/github-action@v2
         with:
           run: | 
             npx cypress cache path
-            npm run test:e2e
+            npm run test
           start: npm run start-prod
           wait-on: http://localhost:3003
       - name: Deploy to Firebase
