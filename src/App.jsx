@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MealPage from './MealPage';
 import MealList from './MealList/';
-import { meals as allMeals } from './data/allMeals.json';
+
+//import { meals as allMeals } from './data/allMeals.json';
 import { useStateValue } from './state';
-import { setResults, setNotification } from './state';
+import { setAllMeals, setResults } from './state';
+
+import { fetchMeals } from './services/mealService';
 
 const App = () => {
 	//const [results, setResults] = useState([]);
+	useEffect(async () => {
+		const data = await fetchMeals();
+		dispatch(setAllMeals(data));
+	}, [dispatch]);
 
-	const [{ mealResults }, dispatch] = useStateValue();
+	const [{ allMeals, mealResults }, dispatch] = useStateValue();
 	const meals = mealResults && mealResults.length > 0 ? mealResults : allMeals;
 	return (
 		<Router>
@@ -17,7 +24,7 @@ const App = () => {
 				<Route exact path="/">
 					<MealList
 						allMeals={allMeals}
-						results={results}
+						results={mealResults}
 						setResults={setResults} />
 				</Route>
 				<Route path='/meal/:id' render={(routeParams) => {
