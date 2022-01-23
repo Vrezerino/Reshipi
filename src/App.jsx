@@ -3,14 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MealPage from './MealPage';
 import MealList from './MealList/';
 
-//import { meals as allMeals } from './data/allMeals.json';
 import { useStateValue } from './state';
 import { setAllMeals, setResults } from './state';
 
 import { fetchMeals } from './services/mealService';
 
 const App = () => {
-	//const [results, setResults] = useState([]);
 	useEffect(async () => {
 		const data = await fetchMeals();
 		dispatch(setAllMeals(data));
