@@ -120,7 +120,7 @@ footer {
 	padding: 0 0.3em 0 0.3em;
 }
 
-.ingredientBtn {
+.ingredientBtn, .clearSearches {
 	border: 0px;
 	font-size: small;
 	background-color: orange;

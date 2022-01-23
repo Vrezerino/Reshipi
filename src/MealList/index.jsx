@@ -80,7 +80,7 @@ const MealList = ({ results, allMeals, setResults }) => {
 				</div>
 				<div>
 					<form onSubmit={clearSearches}>
-						<button type='submit' className='ingredientBtn'>Clear searches</button>
+						<button type='submit' className='clearSearches'>Clear searches</button>
 					</form>
 				</div>
 				<div>
