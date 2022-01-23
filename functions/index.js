@@ -6,7 +6,7 @@ const loginRouter = require('./routers/loginRouter');
 const mealsRouter = require('./routers/mealsRouter');
 const bodyParser = require('body-parser');
 
-app.use(bodyParser);
+app.use(bodyParser.json());
 app.use('/users', userRouter);
 app.use('/login', loginRouter);
 app.use('/meals', mealsRouter);

@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 const userRouter = require('express').Router();
 const knex = require('../db');
 const bcrypt = require('bcrypt');
 
-userRouter.post('/', async (req, res) => {
+userRouter.post('/', async (req, res, next) => {
 	const body = req.body;
 	const saltRounds = 10;
 	const passwordHash = await bcrypt.hash(body.password, saltRounds);
@@ -22,7 +23,7 @@ userRouter.post('/', async (req, res) => {
 	res.json(savedUser);
 });
 
-userRouter.get('/', (req, res) => {
+userRouter.get('/', (req, res, next) => {
 	knex
 		.select('*')
 		.from('users')

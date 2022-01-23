@@ -15,10 +15,8 @@ const App = () => {
 	const fetchData = async () => {
 		try {
 			const data = await fetchMeals();
-			console.log(data);
 			dispatch(setAllMeals(data));
 		} catch (e) {
-			console.log(e.message);
 			dispatch(setNotification(e.message));
 		}
 	};

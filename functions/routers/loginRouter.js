@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 const loginRouter = require('express').Router();
 const knex = require('../db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-loginRouter.post('/', async (req, res) => {
+loginRouter.post('/', async (req, res, next) => {
 	const body = req.body;
 
 	const user = await knex('users').where('username', body.username);
