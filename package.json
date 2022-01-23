@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development --port 3003",
+		"start-test": "NODE_ENV=test webpack-dev-server --open --mode development --port 3003",
     "start-prod": "node functions/index.js",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
