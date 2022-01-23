@@ -1,8 +1,8 @@
-const router = require('express').Router();
+const userRouter = require('express').Router();
 const knex = require('../db');
 const bcrypt = require('bcrypt');
 
-router.post('/', async (req, res) => {
+userRouter.post('/', async (req, res) => {
 	const body = req.body;
 	const saltRounds = 10;
 	const passwordHash = await bcrypt.hash(body.password, saltRounds);
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 	res.json(savedUser);
 });
 
-router.get('/', (req, res) => {
+userRouter.get('/', (req, res) => {
 	knex
 		.select('*')
 		.from('users')
@@ -34,4 +34,4 @@ router.get('/', (req, res) => {
 		});
 });
 
-module.exports = router;
+module.exports = userRouter;

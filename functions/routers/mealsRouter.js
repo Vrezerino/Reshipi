@@ -1,9 +1,9 @@
-const router = require('express').Router();
+const mealsRouter = require('express').Router();
 //const knex = require('../db');
 const meals = require('../data/allMeals.json');
 
-router.get('/', (req, res) => {
+mealsRouter.get('/', (req, res) => {
 	res.json(meals);
 });
 
-module.exports = router;
+module.exports = mealsRouter;

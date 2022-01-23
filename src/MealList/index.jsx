@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useStateValue } from '../state';
 import { mapRecipeInfo } from '../utils/mapRecipeInfo';
 import MealThumb from './MealThumb';
 
 const MealList = ({ results, allMeals, setResults }) => {
 	const meals = results && results.length > 0 ? results : allMeals;
 	const [ingredientSearchTerms, setIngredientSearchTerms] = useState([]);
+	const [{ notification }] = useStateValue();
 
 	// Get all non-repeating ingredients from all meals.
 	const allIngredients = [];
@@ -58,6 +60,7 @@ const MealList = ({ results, allMeals, setResults }) => {
 
 	return (
 		<>
+			{notification && <div>{notification}</div>}
 			<div className='title'>Retsipi</div>
 			<div className='intro'>Find delicious recipes and filter with name and/or ingredients.</div>
 			<div className='search'>

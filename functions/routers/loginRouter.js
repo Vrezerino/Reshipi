@@ -1,9 +1,9 @@
-const router = require('express').Router();
+const loginRouter = require('express').Router();
 const knex = require('../db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-router.post('/', async (req, res) => {
+loginRouter.post('/', async (req, res) => {
 	const body = req.body;
 
 	const user = await knex('users').where('username', body.username);
@@ -29,4 +29,4 @@ router.post('/', async (req, res) => {
 		.send({ token, username: user.username, name: user.name });
 });
 
-module.exports = router;
+module.exports = loginRouter;
