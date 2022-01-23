@@ -3,6 +3,7 @@ import React, { createContext, useContext, useReducer } from 'react';
 const initialState = {
 	allMeals: [],
 	mealResults: [],
+	ingredientSearchTerms: [],
 	notification: ''
 };
 

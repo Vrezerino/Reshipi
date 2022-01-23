@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useStateValue } from '../state';
+import { setResults, setIngredientSearchTerms } from '../state';
 import { mapRecipeInfo } from '../utils/mapRecipeInfo';
 import MealThumb from './MealThumb';
 
-const MealList = ({ results, allMeals, setResults }) => {
+const MealList = ({ results, allMeals }) => {
+	const [{ ingredientSearchTerms }, dispatch] = useStateValue();
 	const meals = results && results.length > 0 ? results : allMeals;
-	const [ingredientSearchTerms, setIngredientSearchTerms] = useState([]);
 	const [{ notification }] = useStateValue();
 
 	// Get all non-repeating ingredients from all meals.
@@ -25,9 +26,9 @@ const MealList = ({ results, allMeals, setResults }) => {
 			const filteredMeals = !ingredientSearchTerms || ingredientSearchTerms.length === 0
 				? allMeals.filter(m => m.strMeal.toLowerCase().includes(searchTerm))
 				: meals.filter(m => m.strMeal.toLowerCase().includes(searchTerm));
-			setResults(filteredMeals);
+			dispatch(setResults(filteredMeals));
 		} else {
-			setResults([]);
+			dispatch(setResults([]));
 		}
 	};
 	// Push meal to results if it has all searched ingredients.
@@ -35,7 +36,7 @@ const MealList = ({ results, allMeals, setResults }) => {
 		e.preventDefault();
 		const searchTerm = e.target.ingSearch.value.toLowerCase().trim();
 		if (!ingredientSearchTerms.includes(searchTerm)) {
-			setIngredientSearchTerms(ingredientSearchTerms.concat(searchTerm));
+			dispatch(setIngredientSearchTerms(ingredientSearchTerms.concat(searchTerm)));
 		}
 
 		const filteredMeals = [];
@@ -49,13 +50,13 @@ const MealList = ({ results, allMeals, setResults }) => {
 			});
 			if (hasAllIngs) filteredMeals.push(m);
 		});
-		setResults(filteredMeals);
+		dispatch(setResults(filteredMeals));
 	};
 
 	const clearSearches = e => {
 		e.preventDefault();
-		setResults([]);
-		setIngredientSearchTerms([]);
+		dispatch(setResults([]));
+		dispatch(setIngredientSearchTerms([]));
 	};
 
 	return (

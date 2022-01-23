@@ -12,6 +12,13 @@ export const setResults = results => {
 	};
 };
 
+export const setIngredientSearchTerms = searchTerms => {
+	return {
+		type: 'SET_INGREDIENT_SEARCH_TERMS',
+		payload: searchTerms
+	};
+};
+
 export const setNotification = notif => {
 	return {
 		type: 'SET_NOTIFICATION',
@@ -36,6 +43,14 @@ export const reducer = (state, action) => {
 				...action.payload
 			],
 			...state.mealResults
+		};
+	case 'SET_INGREDIENT_SEARCH_TERMS':
+		return {
+			...state,
+			ingredientSearchTerms: [
+				...action.payload
+			],
+			...state.ingredientSearchTerms
 		};
 	case 'SET_NOTIFICATION':
 		return {
