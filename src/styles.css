@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmserifdisplay/v5/-nFnOHM81r4j6k0gjAW3mujVU2B2G_Bx0g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@keyframes appear {
+	from {
+		width: 30px;
+		height: 30px;
+		opacity: 0%;
+	}
+	to {
+		width: 150px;
+		height: 150px;
+		opacity: 100%;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+	font-family: 'DM Serif Display';
+}
+
+body > div {
+  flex: 1 0 auto;
+}
+
+.intro {
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+.search, .links {
+  margin: 0 auto;
+  text-decoration: none;
+	text-align: center;
+  width: 100%;
+	top: 0;
+	padding-bottom: 5px;
+	position: -webkit-sticky;
+  position: sticky;
+	background-color: white;
+	z-index: 3;
+	font-size: 23px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+}
+
+footer {
+  color: #888;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.loading-spinner {
+  animation: rotation 2s infinite linear;
+  margin: 120px;
+  width: 80px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.list-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  margin: 10px;
+	border-radius: 0.5em;
+  height: 220px;
+  width: 220px;
+  position: relative;
+	animation: ease-in appear 0.2s;
+}
+
+.list-item-name {
+  position: absolute;
+  color: #000;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #eee;
+}
+
+.ingredientElem {
+	font-size: smaller;
+	background-color: orange;
+	border-radius: 0.3em;
+	padding: 0 0.3em 0 0.3em;
+}
+
+.ingredientBtn {
+	border: 0px;
+	font-size: small;
+	background-color: orange;
+	border-radius: 0.3em;
+	padding: 0 0.3em 0 0.3em;
+	margin-left: 3px;
+}
+
+.meal-page {
+  background: linear-gradient(140deg, var(--pokemon-type-color) 0%, #ddd 100%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  padding: 16px;
+  width: 300px;
+}
+
+.meal-image {
+	border-radius: 1em;
+  min-height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.title, .meal-name, .intro {
+  font-family: 'DM Serif Display';
+  text-align: center;
+}
+
+.meal-name {
+	font-size: 2.3em;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 4em;
+	text-transform: capitalize;
+}
+
+.meal-info {
+	font-size: larger;
+	font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.65);
+  display: flex;
+	text-align: center;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  padding: 16px;
+}
+
+.instructions, .ingredients {
+	max-width: 800px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.ingredients {
+	text-align: center;
+}
