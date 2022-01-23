@@ -12,6 +12,7 @@ describe('Farm CSV database', () => {
 	});
 
 	it('Meals can be filtered by ingredient', () => {
+		cy.get('input[id="mealNameSearch"]').clear();
 		cy.get('input[id="ingSearch"]').type('lemon');
 		cy.get('.ingredientBtn').click();
 		cy.contains('Salmon Prawn Risotto');
