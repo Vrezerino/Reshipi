@@ -46,9 +46,11 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "core-js": "^3.20.3",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.9"
   }
 }
