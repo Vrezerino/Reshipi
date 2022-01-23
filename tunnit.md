@@ -9,5 +9,5 @@
 | 10.1. | 1    | Aloita Firebaseen deploy, muokkaa ulkoasua |
 | 18.1. | 0.5  | Lisää Firebase Functions/backend |
 | 19.1. | 1    | Lisää rekisteröinti ja kirjautuminen |
-| 23.1. | 7    | Lisää rekisteröinti ja kirjautuminen, muuta aterioiden hakua |
-| yht   | 26.5 | | 
+| 23.1. | 8    | Lisää rekisteröinti ja kirjautuminen, muuta aterioiden hakua |
+| yht   | 28.5 | | 
