@@ -12,13 +12,16 @@ import { setAllMeals, setResults } from './state';
 import { fetchMeals } from './services/mealService';
 
 const App = () => {
-	useEffect(async () => {
-		try {
-			const data = await fetchMeals();
-			dispatch(setAllMeals(data));
-		} catch (e) {
-			dispatch(setNotification(e.message));
-		}
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const data = await fetchMeals();
+				dispatch(setAllMeals(data));
+			} catch (e) {
+				dispatch(setNotification(e.message));
+			}
+		};
+		fetchData();
 	}, [dispatch]);
 
 	const [{ allMeals, mealResults }, dispatch] = useStateValue();
