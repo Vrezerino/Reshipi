@@ -15,21 +15,7 @@
 				}
       },
 			{
-				"source": "/api/login",
-				"function": "api",
-				"run": {
-					"region": "europe-north1"
-				}
-			},
-			{
-				"source": "/api/meals",
-				"function": "api",
-				"run": {
-					"region": "europe-north1"
-				}
-			},
-			{
-				"source": "/api/users",
+				"source": "/api/**",
 				"function": "api",
 				"run": {
 					"region": "europe-north1"
