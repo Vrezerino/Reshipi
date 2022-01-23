@@ -14,6 +14,7 @@ const App = () => {
 
 	const fetchData = async () => {
 		try {
+			// fjw4t9gw8j49t
 			const data = await fetchMeals();
 			dispatch(setAllMeals(data));
 		} catch (e) {
