@@ -30,8 +30,8 @@ jobs:
         with:
           run: | 
             npx cypress cache path
-            npm run test:e2e
-          start: npm run start-prod
+            npm run test
+          start: npm run start
           wait-on: http://localhost:3003
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
