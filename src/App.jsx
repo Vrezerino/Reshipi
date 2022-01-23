@@ -9,7 +9,7 @@ import { setAllMeals, setResults } from './state';
 import { fetchMeals } from './services/mealService';
 
 const App = () => {
-	//hfjght
+	//hfjghtfews
 	useEffect(async () => {
 		const data = await fetchMeals();
 		dispatch(setAllMeals(data));
