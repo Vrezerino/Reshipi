@@ -60,7 +60,7 @@ const MealList = ({ results, allMeals, setResults }) => {
 
 	return (
 		<>
-			{notification && <div>{notification}</div>}
+			{notification && <div className='notification'>{notification}</div>}
 			<div className='title'>Retsipi</div>
 			<div className='intro'>Find delicious recipes and filter with name and/or ingredients.</div>
 			<div className='search'>

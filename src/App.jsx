@@ -18,6 +18,7 @@ const App = () => {
 			console.log(data);
 			dispatch(setAllMeals(data));
 		} catch (e) {
+			console.log(e.message);
 			dispatch(setNotification(e.message));
 		}
 	};
