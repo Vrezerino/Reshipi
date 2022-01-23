@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development --port 3003",
-		"start-test": "NODE_ENV=test webpack-dev-server --open --mode none --port 3003",
-		"start-test-win": "SET NODE_ENV=test & webpack-dev-server --open --mode none --port 3003",
+    "start-test": "NODE_ENV=test webpack-dev-server --open --mode none --port 3003",
+    "start-test-win": "SET NODE_ENV=test & webpack-dev-server --open --mode none --port 3003",
     "start-prod": "node functions/index.js",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
@@ -50,6 +50,7 @@
     "axios": "^0.24.0",
     "core-js": "^3.20.3",
     "express": "^4.17.1",
+    "firebase-functions": "^3.16.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

@@ -7,6 +7,6 @@ export const fetchMeals = async () => {
 		return testMeals;
 	} else {
 		const response = await axios.get(`${baseUrl}/api/meals`);
-		return response.data.meals; // return meals array to dispatch
+		return response.data.meals;
 	}
 };
