@@ -7,10 +7,10 @@ const mealsRouter = require('./routers/mealsRouter');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use('/users', userRouter);
-app.use('/login', loginRouter);
-app.use('/meals', mealsRouter);
-app.get('/health', (req, res) => {
+app.use('/api/users', userRouter);
+app.use('/api/login', loginRouter);
+app.use('/api/meals', mealsRouter);
+app.get('/api/health', (req, res) => {
 	res.send('ok');
 });
 exports.api = functions.https.onRequest(app);

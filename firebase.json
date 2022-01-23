@@ -15,7 +15,28 @@
 				}
       },
 			{
-				"source": "/api/**",
+				"source": "/api/login",
+				"function": "api",
+				"run": {
+					"region": "europe-north1"
+				}
+			},
+			{
+				"source": "/api/meals",
+				"function": "api",
+				"run": {
+					"region": "europe-north1"
+				}
+			},
+			{
+				"source": "/api/users",
+				"function": "api",
+				"run": {
+					"region": "europe-north1"
+				}
+			},
+			{
+				"source": "/api/health",
 				"function": "api",
 				"run": {
 					"region": "europe-north1"
