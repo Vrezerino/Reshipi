@@ -17,8 +17,8 @@ const MealList = ({ results, allMeals, setResults }) => {
 		});
 	});
 
-	const searchByMealName = event => {
-		const searchTerm = event.target.value.toLowerCase().trim();
+	const searchByMealName = e => {
+		const searchTerm = e.target.value.toLowerCase().trim();
 		if (searchTerm.length > 0) {
 			const filteredMeals = !ingredientSearchTerms || ingredientSearchTerms.length === 0
 				? allMeals.filter(m => m.strMeal.toLowerCase().includes(searchTerm))
@@ -29,9 +29,9 @@ const MealList = ({ results, allMeals, setResults }) => {
 		}
 	};
 	// Push meal to results if it has all searched ingredients.
-	const searchByIngredients = event => {
-		event.preventDefault();
-		const searchTerm = event.target.ingSearch.value.toLowerCase().trim();
+	const searchByIngredients = e => {
+		e.preventDefault();
+		const searchTerm = e.target.ingSearch.value.toLowerCase().trim();
 		if (!ingredientSearchTerms.includes(searchTerm)) {
 			setIngredientSearchTerms(ingredientSearchTerms.concat(searchTerm));
 		}
@@ -50,8 +50,8 @@ const MealList = ({ results, allMeals, setResults }) => {
 		setResults(filteredMeals);
 	};
 
-	const clearSearches = event => {
-		event.preventDefault();
+	const clearSearches = e => {
+		e.preventDefault();
 		setResults([]);
 		setIngredientSearchTerms([]);
 	};
