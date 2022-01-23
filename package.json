@@ -15,7 +15,8 @@
     "url": "git+https://github.com/Vrezerino/Retsipi.git"
   },
   "keywords": [
-    "retsipi", "recipe"
+    "retsipi",
+    "recipe"
   ],
   "author": "Vrezerino",
   "license": "ISC",
