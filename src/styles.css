@@ -127,7 +127,7 @@ footer {
 	padding: 0 0.3em 0 0.3em;
 }
 
-.ingredientBtn, .clearSearches {
+.ingredientBtn, .clearSearches, .userFormBtn {
 	font-family: 'DM Serif Display';
 	font-size: large;
 	border: 0px;
@@ -172,6 +172,17 @@ footer {
 .userForm table {
 	text-align: center;
 	width: 100%;
+}
+
+.userForm .checkbox {
+	height: 40px;
+	width: 40px;
+}
+
+.userForm .doRegister {
+	height: 40px;
+	vertical-align: middle;
+	font-size: medium;
 }
 
 .meal-name {

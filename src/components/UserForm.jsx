@@ -14,12 +14,17 @@ const UserForm = () => {
 					<tbody>
 						<tr>
 							<td>
-								<input type='checkbox'
+								<input
+									className='checkbox'
+									type='checkbox'
 									id='register'
 									name='register'
 									onChange={() => {
 										setChecked(!checked);
-									}} />Register account
+									}} />
+								<span className='doRegister'>
+									Check this box if you wish to register instead
+								</span>
 							</td>
 						</tr>
 						<tr>
@@ -30,6 +35,11 @@ const UserForm = () => {
 						<tr>
 							<td>
 								<input type='password' placeholder='Password' />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type='submit' className='userFormBtn'>Go!</button>
 							</td>
 						</tr>
 					</tbody>
