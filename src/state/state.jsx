@@ -4,7 +4,8 @@ const initialState = {
 	allMeals: [],
 	mealResults: [],
 	ingredientSearchTerms: [],
-	notification: ''
+	notification: '',
+	user: null
 };
 
 export const StateContext = createContext([

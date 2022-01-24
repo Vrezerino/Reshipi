@@ -10,7 +10,6 @@ userRouter.post('/', async (req, res, next) => {
 
 	const user = ({
 		username: body.username,
-		name: body.name,
 		passwordHash,
 	});
 

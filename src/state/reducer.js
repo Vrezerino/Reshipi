@@ -64,6 +64,11 @@ export const reducer = (state, action) => {
 			...state,
 			notification: action.payload
 		};
+	case 'LOGIN':
+		return {
+			...state,
+			user: action.payload
+		};
 	default:
 		return state;
 	}
