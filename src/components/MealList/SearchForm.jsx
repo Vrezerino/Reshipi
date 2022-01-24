@@ -4,7 +4,7 @@ import { setIngredientSearchTerms } from '../../state';
 const SearchForm = ({ allIngredients, searchByMealName, searchByIngredients, clearSearches }) => {
 	const [{ allMeals, mealResults, ingredientSearchTerms }, dispatch] = useStateValue();
 
-	return(
+	return (
 		<div className='search'>
 			<div>
 				<form>
@@ -33,7 +33,7 @@ const SearchForm = ({ allIngredients, searchByMealName, searchByIngredients, cle
 					<span key={i} className='ingredientElem'>{st}
 						<span onClick={
 							() =>
-							// Remove ingredient search term.
+								// Remove ingredient search term.
 								dispatch(setIngredientSearchTerms(ingredientSearchTerms.filter(ing => ing !== st)))}> ❌
 						</span>
 					</span>)

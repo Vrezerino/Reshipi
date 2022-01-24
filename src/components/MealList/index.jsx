@@ -69,7 +69,7 @@ const MealList = () => {
 			<div className='intro'>Find delicious recipes and filter with name and/or ingredients.</div>
 			{toggleUserForm
 				// Show login link if login/register form not toggled.
-				? <div className='doLogin'>Back</div>
+				? <div className='doLogin' onClick={() => setToggleUserForm(false)}>Back</div>
 				: <div className='doLogin' onClick={() => setToggleUserForm(true)}>Login</div>}
 
 			{toggleUserForm
