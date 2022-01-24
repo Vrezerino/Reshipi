@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useStateValue } from '../../state';
 import { setResults, setIngredientSearchTerms } from '../../state';
 import { mapRecipeInfo } from '../../utils/mapRecipeInfo';
+import UserForm from '../UserForm';
 import MealThumb from './MealThumb';
 import SearchForm from './SearchForm';
 
@@ -9,6 +10,7 @@ const MealList = () => {
 	const [{ allMeals, mealResults, ingredientSearchTerms }, dispatch] = useStateValue();
 	const meals = mealResults && mealResults.length > 0 ? mealResults : allMeals;
 	const [{ notification }] = useStateValue();
+	const [toggleUserForm, setToggleUserForm] = useState(false);
 
 	// Get all unique ingredients from all meals.
 	const allIngredients = [];
@@ -65,11 +67,15 @@ const MealList = () => {
 			{notification && <div className='notification'>{notification}</div>}
 			<div className='title'>Retsipi</div>
 			<div className='intro'>Find delicious recipes and filter with name and/or ingredients.</div>
-			<SearchForm
-				allIngredients={allIngredients}
-				searchByMealName={searchByMealName}
-				searchByIngredients={searchByIngredients}
-				clearSearches={clearSearches}/>
+
+			{toggleUserForm
+				? <UserForm />
+				: <SearchForm
+					allIngredients={allIngredients}
+					searchByMealName={searchByMealName}
+					searchByIngredients={searchByIngredients}
+					clearSearches={clearSearches} />}
+
 			<div className='list-container'>
 				{meals.map(({ idMeal, strMeal, strMealThumb }, i) => (
 					<MealThumb
