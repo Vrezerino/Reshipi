@@ -1,7 +1,7 @@
-import React from 'react';
-import { useStateValue } from '../state';
-import { setResults, setIngredientSearchTerms } from '../state';
-import { mapRecipeInfo } from '../utils/mapRecipeInfo';
+import React, { useState } from 'react';
+import { useStateValue } from '../../state';
+import { setResults, setIngredientSearchTerms } from '../../state';
+import { mapRecipeInfo } from '../../utils/mapRecipeInfo';
 import MealThumb from './MealThumb';
 
 const MealList = () => {
@@ -93,7 +93,7 @@ const MealList = () => {
 							<span onClick={
 								() =>
 								// Remove ingredient search term.
-									dispatch(setIngredientSearchTerms(ingredientSearchTerms.filter(ing => ing !== st)))}> (x)
+									dispatch(setIngredientSearchTerms(ingredientSearchTerms.filter(ing => ing !== st)))}> ❌
 							</span>
 						</span>)
 					}

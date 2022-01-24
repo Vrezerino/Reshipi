@@ -3,8 +3,8 @@ import 'regenerator-runtime/runtime';
 
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MealPage from './MealPage';
-import MealList from './MealList/';
+import MealPage from './components/MealPage';
+import MealList from './components/MealList';
 
 import { setAllMeals, setResults, setNotification, useStateValue } from './state';
 import { fetchMeals } from './services/mealService';

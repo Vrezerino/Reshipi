@@ -41,6 +41,13 @@ body > div {
   flex: 1 0 auto;
 }
 
+input {
+	font-family: 'DM Serif Display';
+	font-size: large;
+	height: 40px;
+	border-radius: 5px;
+}
+
 .intro {
 	font-size: 0.9em;
 	font-style: italic;
@@ -121,8 +128,9 @@ footer {
 }
 
 .ingredientBtn, .clearSearches {
+	font-family: 'DM Serif Display';
+	font-size: large;
 	border: 0px;
-	font-size: small;
 	background-color: orange;
 	border-radius: 0.3em;
 	padding: 0 0.3em 0 0.3em;

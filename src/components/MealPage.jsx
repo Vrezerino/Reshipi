@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { mapRecipeInfo } from './utils/mapRecipeInfo';
+import { mapRecipeInfo } from '../utils/mapRecipeInfo';
 
 const MealPage = ({ meal, previous, next }) => {
 	const formattedRecipeInstructions = meal.strInstructions.split('STEP');
