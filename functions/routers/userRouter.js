@@ -13,13 +13,13 @@ userRouter.post('/', async (req, res, next) => {
 		passwordHash,
 	});
 
-	let savedUser;
 	try {
-		savedUser = await knex('users').insert(user);
+		const savedUser = await knex('users').insert(user);
+		res.header('Access-Control-Allow-Headers: Content-Type');
+		res.json(savedUser);
 	} catch (e) {
 		res.json(e);
 	}
-	res.json(savedUser);
 });
 
 userRouter.get('/', (req, res, next) => {

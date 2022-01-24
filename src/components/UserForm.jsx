@@ -53,12 +53,21 @@ const UserForm = () => {
 						</tr>
 						<tr>
 							<td>
-								<input type='username' placeholder='Username' />
+								<input
+									type='username'
+									placeholder='Username'
+									id='username'
+									name='username' />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type='password' placeholder='Password' autoComplete='current-password' />
+								<input
+									type='password'
+									placeholder='Password'
+									id='password'
+									name='password'
+									autoComplete='current-password' />
 							</td>
 						</tr>
 						<tr>
