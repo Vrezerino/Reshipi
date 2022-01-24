@@ -4,12 +4,12 @@ import { setResults, setIngredientSearchTerms } from '../state';
 import { mapRecipeInfo } from '../utils/mapRecipeInfo';
 import MealThumb from './MealThumb';
 
-const MealList = ({ results, allMeals }) => {
-	const [{ ingredientSearchTerms }, dispatch] = useStateValue();
-	const meals = results && results.length > 0 ? results : allMeals;
+const MealList = () => {
+	const [{ allMeals, mealResults, ingredientSearchTerms }, dispatch] = useStateValue();
+	const meals = mealResults && mealResults.length > 0 ? mealResults : allMeals;
 	const [{ notification }] = useStateValue();
 
-	// Get all non-repeating ingredients from all meals.
+	// Get all unique ingredients from all meals.
 	const allIngredients = [];
 	allMeals.forEach(m => {
 		const mealIngredients = mapRecipeInfo(m, 'strIngredient');
@@ -67,17 +67,17 @@ const MealList = ({ results, allMeals }) => {
 			<div className='search'>
 				<div>
 					<form>
-						{!results || results.length === 0
+						{!mealResults || mealResults.length === 0
 							? <div>Search all {allMeals.length} meal names</div>
-							: <div>{results.length} results</div>}
+							: <div>{mealResults.length} results</div>}
 						<input type='text' id='mealNameSearch' onChange={searchByMealName} />
 					</form>
 				</div>
 				<div>
 					<form onSubmit={searchByIngredients}>
-						{!results || results.length === 0
+						{!mealResults || mealResults.length === 0
 							? <div>Search with ingredients ({allIngredients.length} total)</div>
-							: <div>{results.length} results</div>}
+							: <div>{mealResults.length} results</div>}
 						<input type='text' id='ingSearch' />
 						<button type='submit' className='ingredientBtn'>Add</button>
 					</form>
@@ -92,7 +92,8 @@ const MealList = ({ results, allMeals }) => {
 						<span key={i} className='ingredientElem'>{st}
 							<span onClick={
 								() =>
-									setIngredientSearchTerms(ingredientSearchTerms.filter(ing => ing !== st))}> (x)
+								// Remove ingredient search term.
+									dispatch(setIngredientSearchTerms(ingredientSearchTerms.filter(ing => ing !== st)))}> (x)
 							</span>
 						</span>)
 					}
