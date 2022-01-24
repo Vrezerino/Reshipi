@@ -18,7 +18,6 @@ knex.schema
 				await knex.schema.createTable('users', (table) => {
 					table.increments('id').primary();
 					table.string('username');
-					table.string('fullname');
 					table.string('passwordHash');
 				});
 				console.log('Table \'users\' created');
