@@ -155,9 +155,13 @@ footer {
   background-size: contain;
 }
 
-.title, .meal-name, .intro {
+.title, .meal-name, .intro, .doLogin {
   font-family: 'DM Serif Display';
   text-align: center;
+}
+
+.doLogin {
+	color: maroon;
 }
 
 .meal-name {

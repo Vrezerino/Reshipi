@@ -67,6 +67,10 @@ const MealList = () => {
 			{notification && <div className='notification'>{notification}</div>}
 			<div className='title'>Retsipi</div>
 			<div className='intro'>Find delicious recipes and filter with name and/or ingredients.</div>
+			{toggleUserForm
+				// Show login link if login/register form not toggled.
+				? <div className='doLogin'>Back</div>
+				: <div className='doLogin' onClick={() => setToggleUserForm(true)}>Login</div>}
 
 			{toggleUserForm
 				? <UserForm />
