@@ -4,6 +4,7 @@ const knex = require('../db');
 const bcrypt = require('bcrypt');
 
 userRouter.post('/', async (req, res, next) => {
+	res.header('Access-Control-Allow-Headers: Content-Type');
 	const body = req.body;
 	const saltRounds = 10;
 	const passwordHash = await bcrypt.hash(body.password, saltRounds);
@@ -15,7 +16,6 @@ userRouter.post('/', async (req, res, next) => {
 
 	try {
 		const savedUser = await knex('users').insert(user);
-		res.header('Access-Control-Allow-Headers: Content-Type');
 		res.json(savedUser);
 	} catch (e) {
 		res.json(e);

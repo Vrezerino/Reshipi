@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 loginRouter.post('/', async (req, res, next) => {
+	res.header('Access-Control-Allow-Headers: Content-Type');
 	const body = req.body;
 
 	const user = await knex('users').where('username', body.username);
