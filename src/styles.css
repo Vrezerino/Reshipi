@@ -51,7 +51,7 @@ input {
   position: sticky;
 	background-color: white;
 	z-index: 3;
-	font-size: 23px;
+	font-size: 1.3em;
 }
 
 .nav {
@@ -142,11 +142,11 @@ footer {
 }
 
 .title, .meal-name, .intro, .doLogin {
-  font-family: 'DM Serif Display';
   text-align: center;
 }
 
 .doLogin {
+	font-size: 1.3em;
 	color: maroon;
 }
 
