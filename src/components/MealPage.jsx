@@ -10,7 +10,7 @@ const MealPage = ({ meal, previous, next }) => {
 
 	return (
 		<>
-			<div className='links'>
+			<div className='nav'>
 				{previous && <Link to={`/meal/${previous.idMeal}`}>Previous</Link>}
 				<Link to="/">Home</Link>
 				{next && <Link to={`/meal/${next.idMeal}`}>Next</Link>}

@@ -40,7 +40,7 @@ input {
 	font-style: italic;
 }
 
-.search, .links {
+.search, .nav {
   margin: 0 auto;
   text-decoration: none;
 	text-align: center;
@@ -54,7 +54,7 @@ input {
 	font-size: 23px;
 }
 
-.links {
+.nav {
 	display: flex;
 	justify-content: space-around;
 }
@@ -199,10 +199,16 @@ footer {
 	width: 80%;
 }
 
-.ingredients {
+.ingredients, .notification {
 	text-align: center;
 }
 
 .notification {
 	margin: 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav {
+		font-size: 2em;
+  }
 }
