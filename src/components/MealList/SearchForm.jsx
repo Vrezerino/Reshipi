@@ -17,7 +17,7 @@ const SearchForm = ({ allIngredients, searchByMealName, searchByIngredients, cle
 			<div>
 				<form onSubmit={searchByIngredients}>
 					{!mealResults || mealResults.length === 0
-						? <div>Search with ingredients ({allIngredients.length} total)</div>
+						? <div>Filter by ingredients ({allIngredients.length} total)</div>
 						: <div>{mealResults.length} results</div>}
 					<input type='text' id='ingSearch' />
 					<button type='submit' className='ingredientBtn'>Add</button>

@@ -14,7 +14,6 @@ const App = () => {
 
 	const fetchData = async () => {
 		try {
-			// etfs
 			const data = await fetchMeals();
 			dispatch(setAllMeals(data));
 		} catch (e) {
