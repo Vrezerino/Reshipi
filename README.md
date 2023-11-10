@@ -2,4 +2,4 @@
 
 Find delicious recipes by browsing or filtering by ingredients.
 
-![alt text](https://github.com/Vrezerino/Retsipi/blob/main/src/main/resources/static/usage.mp4?raw=true)
+https://raw.githubusercontent.com/Vrezerino/Retsipi/main/public/usage.mp4
