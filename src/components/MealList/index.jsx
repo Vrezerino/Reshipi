@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useStateValue } from '../../state';
 import { setResults, setIngredientSearchTerms } from '../../state';
 import { mapRecipeInfo } from '../../utils/mapRecipeInfo';
+import Header from '../Header';
 import MealThumb from './MealThumb';
 import SearchForm from './SearchForm';
 import reshipi from '../../../public/img/reshipi.png';
+import loading from '../../../public/img/loading.gif';
 
 const MealList = () => {
 	const [{ allMeals, mealResults, ingredientSearchTerms }, dispatch] = useStateValue();
 	const meals = mealResults && mealResults.length > 0 ? mealResults : allMeals;
-	const [{ notification }] = useStateValue();
-	//const [toggleUserForm, setToggleUserForm] = useState(false);
 
 	// Get all unique ingredients from all meals.
 	const allIngredients = [];
@@ -62,12 +62,17 @@ const MealList = () => {
 		dispatch(setIngredientSearchTerms([]));
 	};
 
+	if (!meals.length || meals.length === 0) {
+		return (
+		<>
+			<Header />
+			<div className='loading'><img src={loading} /></div>
+		</>);
+	}
+
 	return (
 		<>
-			{notification && <div className='notification'>{notification}</div>}
-			<div className='title'>Retsipi</div>
-			<img src={reshipi} class='reshipi'/><br /><br />
-
+			<Header />
 			<SearchForm
 				allIngredients={allIngredients}
 				searchByMealName={searchByMealName}
@@ -85,7 +90,7 @@ const MealList = () => {
 				))}
 			</div>
 			<footer>
-			© 2021-2023 Patrick Park
+				© 2021-2023 Patrick Park
 			</footer>
 		</>
 	);

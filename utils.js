@@ -1,2 +1,2 @@
 export const PORT = process.env.PORT || 3003;
-export const baseUrl = 'https://retsipi.web.app';
+export const baseUrl = window.location.protocol + '//' + window.location.host;

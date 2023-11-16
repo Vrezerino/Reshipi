@@ -228,7 +228,8 @@ footer {
 }
 
 .ingredients,
-.notification {
+.notification,
+.loading {
   text-align: center;
 }
 
