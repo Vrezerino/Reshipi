@@ -4,6 +4,7 @@ import { setResults, setIngredientSearchTerms } from '../../state';
 import { mapRecipeInfo } from '../../utils/mapRecipeInfo';
 import MealThumb from './MealThumb';
 import SearchForm from './SearchForm';
+import reshipi from '../../../public/img/reshipi.png';
 
 const MealList = () => {
 	const [{ allMeals, mealResults, ingredientSearchTerms }, dispatch] = useStateValue();
@@ -65,6 +66,7 @@ const MealList = () => {
 		<>
 			{notification && <div className='notification'>{notification}</div>}
 			<div className='title'>Retsipi</div>
+			<img src={reshipi} class='reshipi'/><br /><br />
 
 			<SearchForm
 				allIngredients={allIngredients}
