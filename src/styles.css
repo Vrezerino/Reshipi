@@ -1,12 +1,12 @@
 @keyframes emerge {
-	from {
-		opacity: 0;
-		margin-top: -3%;
-	}
+  from {
+    opacity: 0;
+    margin-top: -3%;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 
 @font-face {
@@ -19,11 +19,12 @@
 }
 
 a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -34,49 +35,51 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 25px;
-	font-family: 'DM Serif Display';
+  font-family: 'DM Serif Display';
 }
 
-body > div {
+body>div {
   flex: 1 0 auto;
 }
 
 input {
-	font-family: 'DM Serif Display';
-	font-size: large;
-	height: 40px;
-	border-radius: 5px;
+  font-family: 'DM Serif Display';
+  font-size: large;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .intro {
-	font-size: 1.3em;
-	font-style: italic;
+  font-size: 1.3em;
+  font-style: italic;
 }
 
-.search, .nav {
+.search,
+.nav {
   width: max-content;
   margin: 0 auto;
   text-decoration: none;
-	text-align: center;
+  text-align: center;
   width: 100%;
-	top: 0;
-	padding-bottom: 5px;
-	position: -webkit-sticky;
+  top: 0;
+  padding-bottom: 5px;
+  position: -webkit-sticky;
   position: sticky;
-	background-color: rgba(255, 255, 255, 0.5);
-	z-index: 3;
-	font-size: 1.3em;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+  font-size: 1.3em;
 }
 
 .nav {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer {
-  color: #888;
-  font-size: 12px;
-  flex-shrink: 0;
+  margin-top: 4em;
+  font-size: 0.6em;
+  font-style: italic;
+  text-align: center;
 }
 
 .loading-spinner {
@@ -84,10 +87,12 @@ footer {
   margin: 120px;
   width: 80px;
 }
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -96,7 +101,7 @@ footer {
 .list-container {
   display: flex;
   flex-wrap: wrap;
-	justify-content: center;
+  justify-content: center;
 }
 
 .list-item {
@@ -104,7 +109,7 @@ footer {
   background-repeat: no-repeat;
   background-color: #eee;
   margin: 10px;
-	border-radius: 0.5em;
+  border-radius: 0.5em;
   height: 220px;
   width: 220px;
   position: relative;
@@ -121,20 +126,22 @@ footer {
 }
 
 .ingredientElem {
-	font-size: smaller;
-	background-color: orange;
-	border-radius: 0.3em;
-	padding: 0 0.3em 0 0.3em;
+  font-size: smaller;
+  background-color: orange;
+  border-radius: 0.3em;
+  padding: 0 0.3em 0 0.3em;
 }
 
-.ingredientBtn, .clearSearches, .userFormBtn {
-	font-family: 'DM Serif Display';
-	font-size: large;
-	border: 0px;
-	background-color: orange;
-	border-radius: 0.3em;
-	padding: 0 0.3em 0 0.3em;
-	margin-left: 3px;
+.ingredientBtn,
+.clearSearches,
+.userFormBtn {
+  font-family: 'DM Serif Display';
+  font-size: large;
+  border: 0px;
+  background-color: orange;
+  border-radius: 0.3em;
+  padding: 0 0.3em 0 0.3em;
+  margin-left: 3px;
 }
 
 .meal-page {
@@ -148,14 +155,17 @@ footer {
 }
 
 .meal-image {
-	border-radius: 1em;
+  border-radius: 1em;
   min-height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.title, .meal-name, .intro {
+.title,
+.meal-name,
+.intro,
+footer {
   text-align: center;
   color: rgb(160, 48, 20);
 }
@@ -168,65 +178,67 @@ footer {
 }
 
 .userForm {
-	margin: 0 auto;
-	width: 500px;
+  margin: 0 auto;
+  width: 500px;
 }
 
 .userForm table {
-	text-align: center;
-	width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .userForm .checkbox {
-	height: 40px;
-	width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .userForm {
-	height: 40px;
-	vertical-align: middle;
-	font-size: medium;
+  height: 40px;
+  vertical-align: middle;
+  font-size: medium;
 }
 
 .meal-name {
-	font-size: 2.3em;
+  font-size: 2.3em;
 }
 
 .title {
-	font-weight: bold;
-	font-size: 4em;
-	text-transform: capitalize;
+  font-weight: bold;
+  font-size: 4em;
+  text-transform: capitalize;
 }
 
 .meal-info {
-	font-size: larger;
-	font-weight: bold;
+  font-size: larger;
+  font-weight: bold;
   background-color: rgba(255, 255, 255, 0.65);
   display: flex;
-	text-align: center;
+  text-align: center;
   flex-direction: column;
   flex-grow: 1;
   height: 100%;
   padding: 16px;
 }
 
-.instructions, .ingredients {
-	max-width: 800px;
-	margin: 0 auto;
-	width: 80%;
+.instructions,
+.ingredients {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.ingredients, .notification {
-	text-align: center;
+.ingredients,
+.notification {
+  text-align: center;
 }
 
 .notification {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 500px) {
   .nav {
-		font-size: 2em;
+    font-size: 2em;
   }
 
   .reshipi {

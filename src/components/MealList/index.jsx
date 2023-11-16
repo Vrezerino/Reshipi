@@ -84,6 +84,9 @@ const MealList = () => {
 						wait={i} />
 				))}
 			</div>
+			<footer>
+			© 2021-2023 Patrick Park
+			</footer>
 		</>
 	);
 };
