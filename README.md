@@ -1,4 +1,4 @@
-# Retsipi
+# Reshipi
 
 Find delicious recipes by browsing or filtering by ingredients.
 
