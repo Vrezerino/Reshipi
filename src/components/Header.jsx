@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <>
-            <div className='title'>Retsipi</div>
+            <div className='title'>Reshipi</div>
             <img src={reshipi} className='reshipi' /><br /><br />
             {notification && <div className='notification'>{notification}</div>}
         </>
