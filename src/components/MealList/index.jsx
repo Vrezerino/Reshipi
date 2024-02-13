@@ -90,7 +90,7 @@ const MealList = () => {
 				))}
 			</div>
 			<footer>
-				© 2021-2023 Patrick Park
+				© 2021-2024 Patrick Park
 			</footer>
 		</>
 	);

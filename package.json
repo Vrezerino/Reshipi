@@ -1,7 +1,7 @@
 {
   "name": "retsipi",
   "version": "1.0.0",
-  "description": "Retsipi",
+  "description": "Reshipi",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development --port 3003",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Vrezerino/Retsipi.git"
   },
   "keywords": [
-    "retsipi",
+    "reshipi",
     "recipe"
   ],
   "author": "Vrezerino",
