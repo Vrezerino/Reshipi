@@ -1,5 +1,5 @@
 {
-  "name": "retsipi",
+  "name": "reshipi",
   "version": "1.0.0",
   "description": "Reshipi",
   "main": "src/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vrezerino/Retsipi.git"
+    "url": "git+https://github.com/Vrezerino/Reshipi.git"
   },
   "keywords": [
     "reshipi",
@@ -22,7 +22,7 @@
   ],
   "author": "Vrezerino",
   "license": "ISC",
-  "homepage": "https://github.com/Vrezerino/Retsipi",
+  "homepage": "https://github.com/Vrezerino/Reshipi",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-transform-runtime": "^7.10.0",
@@ -48,14 +48,14 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^1.6.7",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "core-js": "^3.20.3",
     "express": "^4.17.1",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.16.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
